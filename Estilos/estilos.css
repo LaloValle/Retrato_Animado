@@ -40,26 +40,26 @@ body {
     position: relative;
     overflow-x: hidden;
     width: 100vw; min-height: 100vh;
-    background: linear-gradient(to bottom, var(--azul_obscuro) 1%, var(--azul_claro));
+    background: linear-gradient(to bottom, #1d3c7f 1%, #69b7cc);
 }
 
 /*  CABEZERA */
 #contenedor_cabezera {
     width: 100vw;
     padding-top: 35px;
-    background-color: var(--azul_obscuro);
+    background-color: #1d3c7f;
 }
 #cabezera {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    width: min(100vw, var(--ancho_maximo));
-    background-color: var(--azul_obscuro);
+    width: min(100vw, 600px);
+    background-color: #1d3c7f;
 }
 #cabezera::before {
     content: '';
     z-index: 0;
-    background-image: linear-gradient(to left, var(--rosa) 74%, transparent);
+    background-image: linear-gradient(to left, #fd87fe 74%, transparent);
     border-radius: 50% 50% 50% 20%;
     position: absolute;
     width: min(210px,35vw); height: min(193px,32.17vw);
@@ -111,15 +111,15 @@ body {
     perspective: 1000px;
     background-clip: text;
     transform-origin: 50% 50%;
-    color: var(--color_nombre);
+    color: #003049;
     transform-style: preserve-3d;
-    top: min(9.5vw,var(--ancho_maximo) * 0.095);
-    left: min(5vw,var(--ancho_maximo) * 0.05);
-    width: min(60vw,var(--ancho_maximo) * 0.6);
-    height: min(32vw,var(--ancho_maximo) * 0.32);
+    top: min(9.5vw,600px * 0.095);
+    left: min(5vw,600px * 0.05);
+    width: min(60vw,600px * 0.6);
+    height: min(32vw,600px * 0.32);
     align-items: center; justify-content: center;
     animation: mostrar_nombre 0.5s 1.5s ease forwards;
-    font-size: clamp(1rem, 9vw, var(--ancho_maximo) * 0.09);
+    font-size: clamp(1rem, 9vw, 600px * 0.09);
     transform: rotateY(45deg) rotateX(20deg) rotateZ(-4deg);
 }
 #cabezera_nombre_texto::after {
@@ -127,20 +127,15 @@ body {
     top: 10%; right: 6%;
     position: absolute;
     width: 90%; height: 80%;
-    background-color: var(--blanco_pantalla);
+    background-color: #d6e5e5;
     animation: teclear_nombre 1s 1.8s forwards;
 }
 @keyframes mostrar_nombre {
-   to {
-        opacity: 1.0;
-    }
+   to {opacity: 1.0;}
 }
 @keyframes teclear_nombre {
     to{width: 0px;}
 }
-/* #cabezera_nombre_texto:hover {
-    color: transparent;
-} */
 /*  RETRATO */
 #contenedor_retrato {
     width: 100vw;
@@ -149,14 +144,14 @@ body {
     content: '';
     position: absolute;
     width: 100vw; height: 150px;
-    background: linear-gradient(to bottom, var(--azul_obscuro), transparent);
+    background: linear-gradient(to bottom, #1d3c7f, transparent);
 }
 #retrato {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    width: min(100vw, var(--ancho_maximo));
-    top: max(-16vw,var(--ancho_maximo) * -0.16);
+    width: min(100vw, 600px);
+    top: max(-16vw,600px * -0.16);
 }
 #retrato_recuadro_contenedor {
     width: 90%;
@@ -167,7 +162,7 @@ body {
     z-index: 0;
     width: 98%;
     position: absolute;
-    top: min(7vw,var(--ancho_maximo) * 0.07); left: 1%;
+    top: min(7vw,600px * 0.07); left: 1%;
 }
 #retrato_marco {
     width: 100%;
@@ -303,9 +298,9 @@ body {
 }
 #retrato_grado {
     position: absolute;
-    color: var(--azul_grado);
-    font-size: clamp(0.8rem,7.3vw,var(--ancho_maximo) * 0.073);
-    bottom: min(5vw,var(--ancho_maximo) * 0.05); right: min(6vw,var(--ancho_maximo) * 0.06);
+    color: #4264bb;
+    font-size: clamp(0.8rem,7.3vw,600px * 0.073);
+    bottom: min(5vw,600px * 0.05); right: min(6vw,600px * 0.06);
 }
 #retrato_compartir {
     width: 100%;
@@ -317,7 +312,7 @@ body {
 }
 #retrato_compartir_grid {
     display: grid;
-    width: 54%; height: min(34vw,var(--ancho_maximo) * 0.34);
+    width: 54%; height: min(34vw,600px * 0.34);
     grid-template-columns: 50% 50%;
     grid-template-rows: 33% 33% 33%;
 }
@@ -341,26 +336,26 @@ body {
     font-family: 'Poppins';
     background-clip: text;
     -webkit-background-clip: text;
-    background-image: linear-gradient(to bottom, var(--instagram_3), var(--rosa)) ;
+    background-image: linear-gradient(to bottom, #e09b3d, #fd87fe) ;
 }
 #retrato_compartir_grid > i img {
     height: 90%;
-    margin-left: min(9vw,var(--ancho_maximo) * 0.09);
+    margin-left: min(9vw,600px * 0.09);
     cursor: pointer;
     border-radius: 50%;
     object-fit: contain;
 }
 #icono_instagram:hover {
-    background-image: linear-gradient(225deg, var(--instagram_1), var(--instagram_2), var(--instagram_3));
+    background-image: linear-gradient(225deg, #7024c4, #c42969, #e09b3d);
 }
 #icono_whatsapp:hover {
-    background-color: var(--whatsapp)
+    background-color: #29a71a
 }
 #icono_twitter:hover {
-    background-color: var(--twitter)
+    background-color: #55acee
 }
 #icono_facebook:hover {
-    background-color: var(--facebook)
+    background-color: #3a559f
 }
 #retrato_compartir_grid .boton {
     grid-column-start: 1;
@@ -382,11 +377,11 @@ body {
     font-family: 'Poppins';
     justify-content: center;
     border-radius: 20px;
-    outline: 1px solid var(--azul_obscuro);
+    outline: 1px solid #1d3c7f;
 }
 .boton:hover {
     outline: 0px;
-    background-color: var(--azul_obscuro);
+    background-color: #1d3c7f;
 }
 .boton img {
     margin-right: 10px;
